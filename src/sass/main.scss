@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Onest:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Rubah $ dengan $
+
+// Responsive Breakpoint
+$media-sm: 640px;
+$media-md: 768px;
+$media-lg: 1024px;
+$media-xl: 1280px;
+
+// Font Variable
+$caveat: "Caveat", cursive;
+$poppins: "Poppins", sans-serif;
+$onest: "Onest", sans-serif;
+
+
+$color-profile: rgb(132, 146, 148);
+
+html,
+body {
+    font-family: $poppins;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    .container{
+        width: 100%;
+        height: min-content;
+        // border: 2px solid white;
+        .wrap-nav{
+            display: flex;
+            justify-content: space-between;
+            .left-nav{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                gap: 10px;
+                .home{
+                    @media screen and (min-width: $media-lg) {
+                        width: 20%;
+
+                    }
+                    width: 80%;
+                    display: flex;
+                    border:  2px double white;
+                    border-radius: 20px;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 7px 10px;
+                }
+                .porto-cate{
+                    @media screen and (min-width: $media-lg) {
+                        display: flex;
+                    }
+                    display: none;
+                    width: 55%;
+                    border: 2px double white;
+                    border-radius: 20px;
+                    align-items: center;
+                    padding: 5px;
+                    justify-content: space-around;
+                    gap: 10px;
+                    .wrap-porto{
+                        width: 50%;
+                        display: flex;
+                        border: 1px solid white;
+                        justify-content: space-between;
+                        border-radius: 20px;
+                        padding: 2px 10px;
+                        align-items: center;
+                        .porto{
+                        }
+                        .number{
+                            background-color: yellow;
+                            color: black;
+                            padding: 0 20px 0 20px;
+                            border-radius: 10px;
+                        }
+                          
+                    }
+                    .wrap-cate{
+                        width: 50%;
+                        display: flex;
+                        border: 1px solid white;
+                        justify-content: space-between;
+                        border-radius: 20px;
+                        padding: 2px 10px;
+                        align-items: center;
+                        .cate{
+
+                        }
+                        .colection{
+                            background-color: red;
+                            color: white;
+                            padding: 0 20px 0 20px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+            .right-nav{
+                @media screen and (min-width: $media-lg) {
+                    display: flex;
+                }
+                display: none;
+                gap: 10px;
+                font-size: 2rem;
+                align-items: center;
+                .icon{
+                    border: 2px solid white;
+                    border-radius: 50%;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    font-size: 1.5rem;
+                }
+            }
+            .menu{
+                @media screen and (min-width: $media-lg) {
+                    display: none;
+                }
+                display: flex;
+                font-size: 1.5rem;
+                border: 1px solid white;
+                padding: 5px 20px;
+                border-radius: 20px;
+            }
+        }
+    
+    }
+    .profile{
+        @media screen and (min-width: $media-lg) {
+            flex-direction: row;
+        }
+        background-color: $color-profile;
+        width: 100%;
+        height: 40%;
+        border-radius: 3vh;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        margin-top: 20px;
+        .left-profile{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .name{
+                font-size: 5rem;
+                font-weight: bold;
+            }
+            .profile-status{
+                @media screen and (min-width: $media-lg) {
+                    flex-direction: row;
+                    align-items: center;
+                }
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                flex-direction: column;
+                .left-status{
+                    @media screen and (min-width: $media-lg) {
+                        width: 400px;
+                        
+                    }
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 10px;
+                    border: 2px solid white;
+                    border-radius: 20px;
+                    .fa-arrow-right{
+                        border-radius: 50%;
+                        width: 30px;
+                        aspect-ratio: 1/1;
+                        background-color: gray;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+        .right-profile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            img{
+                width: 150px;
+                border-radius: 50%;
+            }
+            .send{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 200px;
+                height: 40px;
+                padding: 10px;
+                border-radius: 20px;
+                color: white;
+                background-color: gray;
+            }
+        }
+    }
+    .category{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        .header-category{
+            @media screen and (min-width: $media-lg){
+                flex-direction: row;
+            }
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 20px;
+            .left-category{
+                display: flex;
+                gap: 20px;
+                .bubble-category{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 150px;
+                    height: 25px;
+                    padding: 10px;
+                    border-radius: 1.2vh;
+                    color: grey;
+                    border: 1px solid white;
+                }
+            }
+            .right-category{
+                display: flex;
+            }
+        }
+        .section-wrap-card{
+            @media screen and (min-width: $media-lg){
+                flex-direction: row;
+            }
+            display: flex;
+            flex-grow: 3;
+            gap: 10px;
+            margin-top: 20px;
+            flex-direction: column;
+
+            .wrap-card{
+                @media screen and (min-width: $media-lg){
+                    width: 33%;
+                }
+                width: 100%;
+                display: flex;
+                flex-grow: 1;
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+                border-radius: 2vh;
+                border: 1px solid white;
+                .header-card{
+                    display: flex;
+                    justify-content: space-between;
+                    .left-top-card{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 120px;
+                        height: 30px;
+                        border: 1px solid white;
+                        border-radius: 3vh;
+                    }
+                .fa-arrow-right{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: white;
+                    border: 50%;
+                    width: 30px;
+                    height: 30px;
+                    color: black;
+                    border-radius: 50%;
+                }
+                    
+                }
+                .img-card{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        
+        .right-footer{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .wrap-bottom-footer{
+            display: flex;
+            border-top: 2px solid white;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            .left-footer{
+                display: flex;
+                width: 20%;
+            }
+            .footer-wrap-hidden{
+                @media screen and (min-width: $media-lg){
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 60%;
+                }
+                display: flex;
+                width: 40%;
+                align-items: end;
+                justify-content: flex-end;
+                flex-direction: column;
+                .fa-arrow-right-long{
+                    margin-right: 5px;
+                }
+                .hidden-footer{
+                    @media screen and (min-width: $media-lg){
+                        display: flex;
+                        justify-content: space-between;
+                        width: 50%;
+                    }
+                    display: none;
+                }
+            } 
+        }
+    }
+}
